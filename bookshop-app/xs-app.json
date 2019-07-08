@@ -1,0 +1,20 @@
+{
+  "welcomeFile": "/bookshop-app/test/flpSandbox.html",
+  "authenticationMethod": "route",
+  "logout": {
+    "logoutEndpoint": "/do/logout"
+  },
+  "routes": [
+    {
+      "source": "/odata/v2",
+      "authenticationType": "xsuaa",
+      "destination": "srv_api",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/bookshop-app/(.*)$",
+      "target": "$1",
+      "localDir": "webapp"
+    }
+  ]
+}
