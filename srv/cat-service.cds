@@ -3,7 +3,7 @@ using my.bookshop from '../db/data-model';
 @cds.query.limit: 2
 service CatalogService {
   @Capabilities.SearchRestrictions.Searchable: true	
-  entity Books  as projection on bookshop.Books excluding {stock};
+  entity Books  as projection on bookshop.Books ;  //excluding {stock};
   entity Authors  as projection on bookshop.Authors ;
   entity Orders  as projection on bookshop.Orders;
   entity Document as projection on bookshop.MyMimeEntity;

@@ -1,14 +1,14 @@
 namespace my.bookshop;
 using { Country, managed } from '@sap/cds/common';
 
-entity Books {
+entity Books : managed {
   key ID : Integer;
   title  : localized String;
   author : Association to Authors;
   stock  : Integer;
 }
 
-entity Authors {
+entity Authors : managed {
   key ID : Integer;
   name   : String;
   virtual noOfBooks : Integer;
